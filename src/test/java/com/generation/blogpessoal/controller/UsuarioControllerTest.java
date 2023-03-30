@@ -73,7 +73,7 @@ public class UsuarioControllerTest {
 	public void deveAtualizarUmUsuario() {
 		
 		Optional<Usuario> usuarioCadastrado = usuarioService.cadastrarUsuario(new Usuario(0L, "Juliana Andrews", "juliana_andrews@email.com.br", "juliana123", "https://i.imgur.com/yDRVeK7.jpg"));
-		
+
 		Usuario usuarioUpdate = new Usuario(usuarioCadastrado.get().getId(), "Juliana Andrews Ramos", "juliana_ramos@email.com.br", "juliana123", "https://i.imgur.com/yDRVeK7.jpg");
 		
 		HttpEntity<Usuario> corpoRequisicao = new HttpEntity<Usuario> (usuarioUpdate);
